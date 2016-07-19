@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> This is the repo list for: </h1>
+      <h2><%= username %></h2>
+
+    <% repolist.each do |repo| %>
+      <p> Current repo for:
+      <%= repo["name"] %> </p>
+    <% end %>
+  </body>
+</html>

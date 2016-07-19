@@ -9,14 +9,15 @@ class GithubRepoClient
   end
 
   def get_users_repolist
-    self.class.get("/users/#{@name}/repos")
+    self.class.get("/users/#{@username}/repos", headers: {
+      "Authorization" => "token #{ENV["GITHUB_TOKEN"]}",
+      "User-Agent" => "atshelton"
+      })
+
   end
 
   def display_repolist
     result = get_users_repolist
-    p result[0]
+    result.each
   end
 end
-
-client = GithubRepoClient.new("atshelton")
-client.display_repolist

@@ -5,11 +5,12 @@
 
   <body class='repo-selector'>
     <h1>Github Repo Selector</h1>
+    <p> Please input Username to see desired Repo List </p>
 
-    <p>The repo list for <%= username %> is <%=  %></p>
 
-    <form action="/username" method="post">
-      <input type="text" name="zip" value="">
+
+    <form action="/repos" method="post">
+      <input type="text" name="username" value="">
       <input type="submit" name="submit_button" value="Go">
     </form>
 

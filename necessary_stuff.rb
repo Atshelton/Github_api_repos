@@ -7,3 +7,5 @@ require 'sinatra/base'
 require 'pry'
 
 require 'erb'
+
+require './client'
